@@ -2,10 +2,14 @@
 %% Author: cpp_hleucka
 %% Date: July 19, 2016
 
-%% Decision (player value x, dealer value y, decision z)
-%% Value decision (x, y, z)
-%% Ace decision (ax, y ,z)
-%% Split decision (xx, y, z) 
+%% Prolog
+%% Use gprolog to run code
+%% To load file: ['blackjack.pl']
+
+%% Decision (player value X, dealer value Y, decision Z)
+%% Value decision (X, Y, Z)
+%% Ace decision (aX, Y ,Z)
+%% Split decision (XX, Y, Z) 
 decision(8,2,hit).
 decision(8,3,hit).
 decision(8,4,hit).
