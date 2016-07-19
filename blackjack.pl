@@ -296,10 +296,15 @@ decision(aa,10, split).
 decision(aa,a, split).
 
 %% The good stuff is here ;)
-%% Show possible decisions based off player and dealer values - ex) evalDecision(12, 8, X, L).  
+%% Show possible decisions based off player and dealer values
+%% ex)  input: 	evalDecision(12, 8, X, L).  
+%%		output: L = [hit]
 evalDecision(X,Y,Z,L) :- findall(Z, (decision(X,Y,Z)), L).
-%% Show possible player hands based off dealer and decision values - ex) evalPlayer(X, 8, stand, L).
+%% Show possible player hands based off dealer and decision values
+%% ex)  input: 	evalPlayer(X, 8, hit, L).
+%%		output: L = [2,3,7,8,9,10,a]
 evalPlayer(X,Y,Z,L) :- findall(X, (decision(X,Y,Z)), L).
-%% Show possible dealer hands based off player and decision values - ex) evalDealer(12, X, stand, L).
+%% Show possible dealer hands based off player and decision values
 evalDealer(X,Y,Z,L) :- findall(Y, (decision(X,Y,Z)), L).
-
+%% ex)  input:  evalDealer(12, X, stand, L).
+%%		output: L = [4,5,6]
