@@ -88,8 +88,8 @@ decision(15,6,stand).
 decision(15,7,hit).
 decision(15,8,hit).
 decision(15,9,hit).
-decision(15,10,hit).
-decision(15,a,hit).
+decision(15,10,'Surrender if allowed, otherwise hit').
+decision(15,a,'Surrender if allowed, otherwise hit').
 decision(16,2,stand).
 decision(16,3,stand).
 decision(16,4,stand).
@@ -97,9 +97,9 @@ decision(16,5,stand).
 decision(16,6,hit).
 decision(16,7,hit).
 decision(16,8,hit).
-decision(16,9,hit).
-decision(16,10,hit).
-decision(16,a,hit).
+decision(16,9,'Surrender if allowed, otherwise hit').
+decision(16,10,'Surrender if allowed, otherwise hit').
+decision(16,a,'Surrender if allowed, otherwise hit').
 decision(17,2,stand).
 decision(17,3,stand).
 decision(17,4,stand).
@@ -109,7 +109,7 @@ decision(17,7,stand).
 decision(17,8,stand).
 decision(17,9,stand).
 decision(17,10,stand).
-decision(17,a,stand).
+decision(17,a,'Surrender if allowed, otherwise stand').
 
 %% Ace decisions
 decision(a2,2,hit).
@@ -163,10 +163,10 @@ decision(a6,9,hit).
 decision(a6,10,hit).
 decision(a6,a,hit).
 decision(a7,2,stand).
-decision(a7,3,double).
-decision(a7,4,double).
-decision(a7,5,double).
-decision(a7,6,double).
+decision(a7,3,'Double if allowed, otherwise stand').
+decision(a7,4,'Double if allowed, otherwise stand').
+decision(a7,5,'Double if allowed, otherwise stand').
+decision(a7,6,'Double if allowed, otherwise stand').
 decision(a7,7,stand).
 decision(a7,8,stand).
 decision(a7,9,hit).
@@ -263,7 +263,7 @@ decision(88,7, split).
 decision(88,8, split).
 decision(88,9, split).
 decision(88,10, split).
-decision(88,a, split).
+decision(88,a, 'Surrender if allowed, otherwise split').
 decision(99,2, split).
 decision(99,3, split).
 decision(99,4, split).
@@ -295,9 +295,11 @@ decision(aa,9, split).
 decision(aa,10, split).
 decision(aa,a, split).
 
+%% The good stuff is here ;)
+%% Show possible decisions based off player and dealer values - ex) evalDecision(12, 8, X, L).  
+evalDecision(X,Y,Z,L) :- findall(Z, (decision(X,Y,Z)), L).
 %% Show possible player hands based off dealer and decision values - ex) evalPlayer(X, 8, stand, L).
 evalPlayer(X,Y,Z,L) :- findall(X, (decision(X,Y,Z)), L).
 %% Show possible dealer hands based off player and decision values - ex) evalDealer(12, X, stand, L).
 evalDealer(X,Y,Z,L) :- findall(Y, (decision(X,Y,Z)), L).
-%% Show possible decisions based off player and dealer values - ex) evalDecision(12, 8, X, L).  
-evalDecision(X,Y,Z,L) :- findall(Z, (decision(X,Y,Z)), L).
+
