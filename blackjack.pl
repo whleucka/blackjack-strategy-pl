@@ -23,7 +23,7 @@ decision(a3,[h,h,h,d,d,h,h,h,h,h]).
 decision(a4,[h,h,d,d,d,h,h,h,h,h]).
 decision(a5,[h,h,d,d,d,h,h,h,h,h]).
 decision(a6,[h,d,d,d,d,h,h,h,h,h]).
-decision(a7,[s,d,s,d,s,s,s,h,h,h]).
+decision(a7,[s,ds,ds,ds,ds,s,s,h,h,h]).
 decision(a8,[s,s,s,s,s,s,s,s,s,s]).
 decision(a9,[s,s,s,s,s,s,s,s,s,s]).
 decision(22,[sp,sp,sp,sp,sp,sp,h,h,h,h]).
