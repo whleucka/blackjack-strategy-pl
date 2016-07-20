@@ -50,5 +50,5 @@ actions(xs,['Surrender if allowed, otherwise Stand']).
 %% Evaluate the decision
 %% X: Player hand
 %% Y: Dealer hand
-%% L: Recommended action
+%% M: Recommended action
 evalDecision(X, Y, M) :- dealer(x, Q), nth(P, Q, Y), decision(X, Z), nth(P, Z, L), actions(L, M).
