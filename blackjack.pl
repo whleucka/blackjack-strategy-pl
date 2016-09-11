@@ -1,8 +1,6 @@
-%% Episode 214 Coding Challenge
+%% Blackjack Decision Helper
 %% Author: cpp_hleucka
-%% Date: July 20, 2016
-%% EDIT: I wanted to fix the crazyness of listing every fact individually; therefore, I decided to use an indexed list. 
-%% Prolog entry
+%% Date: Sept 11, 2016 
 
 %% Please use gprolog and load the file using: 
 %% ['blackjack'].
