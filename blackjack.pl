@@ -1,10 +1,14 @@
 %% Blackjack Decision Helper
 %% Author: cpp_hleucka
 %% Date: Sept 11, 2016 
-
+%%
 %% Please use gprolog and load the file using: 
 %% ['blackjack'].
-
+%%
+%% Use this example to get the evaluated decision
+%% ex) evalDecision(15,a,M). 
+%% = Surrender if allowed, otherwise Hit
+%%
 %% Decision lookup table
 decision(8,[h,h,h,h,h,h,h,h,h,h]).
 decision(9,[h,d,d,d,d,h,h,h,h,h]).
