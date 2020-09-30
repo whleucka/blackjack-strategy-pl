@@ -12,12 +12,12 @@ Start up the application using gprolog
 
 There is only one function, evalDecision(x,y,z)
 
-a = Ace
-x = players hand (value hands 8-17 or a2, a3, etc & splits = 99, 1010, aa, etc)
-y = dealers card (2,3,4,5,6,7,8,9,10,a & face cards = 10)
-z = result
+- a = Ace
+- x = players hand (value hands 8-17 or a2, a3, etc & splits = 99, 1010, aa, etc)
+- y = dealers card (2,3,4,5,6,7,8,9,10,a & face cards = 10)
+- z = result
 
-Example)
+### Example
 
 ```prolog
 ?- evalDecision(12,5,M).
